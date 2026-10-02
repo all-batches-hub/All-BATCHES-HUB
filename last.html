@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALL BATCHES HUB - Final Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+        .floating-banner {
+            position: fixed;
+            top: 42px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 92%;
+            max-width: 600px;
+            background-color: #D68A00;
+            color: #000;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+            font-size: 16px;
+            z-index: 1000;
+            border-radius: 30px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            animation: blinker 1.5s linear infinite;
+        }
+        @keyframes blinker {
+            50% { opacity: 0.3; }
+        }
+        .page-counter-bar {
+            position: fixed;
+            top: 1px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 92%;
+            max-width: 600px;
+            background-color: #1e2121;
+            color: #f7fafa;
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 15px;
+            font-weight: bold;
+            font-size: 14px;
+            z-index: 999;
+            border-radius: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+            border: 1px solid #ddd;
+        }
+        .page-layout {
+            display: flex !important;
+            flex-direction: row !important;
+            justify-content: space-between !important;
+            align-items: flex-start !important;
+            width: 100% !important;
+            box-sizing: border-box !important;
+            gap: 15px !important;
+            padding-top: 80px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .main-content {
+            flex: 1 !important;
+            min-width: 0 !important;
+        }
+        .sidebar-right {
+            width: 300px !important;
+            flex-shrink: 0 !important;
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 10px !important;
+            position: sticky !important;
+            top: 60px !important;
+        }
+        @media screen and (max-width: 1024px) {
+            .sidebar-right { display: none !important; }
+            .main-content { width: 100% !important; }
+            .page-layout { padding-left: 0; padding-right: 0; }
+        }
+        .ad-container {
+            text-align: center;
+            background: #fff;
+            padding: 10px;
+            margin: 10px 0;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+        }
+        .action-section {
+            text-align: center;
+            padding: 20px;
+            background: #fff;
+            margin: 10px 0;
+        }
+        .timer-btn {
+            background-color: #ff9800;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 30px;
+            cursor: not-allowed;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        .scroll-btn, .continue-btn {
+            background-color: #f70202;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 30px;
+            cursor: pointer;
+            display: none;
+            margin: 0 auto;
+            text-decoration: none;
+        }
+        .continue-btn { background-color: #00b300; }
+        .content-box {
+            padding: 20px;
+            background: #fff;
+            margin-bottom: 15px;
+        }
+        h1 { font-size: 22px; color: #111; }
+        p { font-size: 14px; margin-bottom: 15px; }
+        #step-2-section, #step-3-section { display: none; }
+    </style>
+</head>
+<body>
+
+    <div id="topFloatingBanner" class="floating-banner">
+         Site ko अच्छी तरह से लोड होने दीजिये , उसके बाद ही Scroll कीजिये l
+    </div>
+
+    <div class="page-counter-bar">
+        <span>𝐏𝐚𝐠𝐞-𝟎𝟑 (Final)</span>
+        <span>𝗧𝗼𝘁𝗮𝗹 𝗣𝗮𝗴𝗲𝘀- 𝟬𝟯</span>
+    </div>
+
+    <div class="page-layout">
+        <main class="main-content">
+            <!-- STEP 1 PORTION -->
+            <div id="step-1-section">
+                <div class="ad-container">
+                    <iframe src="ad-native.html" width="100%" height="250" frameborder="0" scrolling="no"></iframe>
+                    <iframe src="ad-native.html" width="100%" height="250" frameborder="0" scrolling="no"></iframe>
+                </div>
+
+                <h1>Almost Done: Final Destination Link Preparation</h1>
+                <p>Aapka link taiyar ho raha hai. Kripya niche diye gaye steps ko follow karke apne destination tak pahuchein.</p>
+                
+                <div class="ad-container">
+                    <iframe src="ad-native.html" width="100%" height="250" frameborder="0" scrolling="no"></iframe>
+                </div>  
+
+                <div class="action-section">
+                    <button id="timerButton" class="timer-btn">𝐏𝐥𝐞𝐚𝐬𝐞 𝐖𝐚𝐢𝐭... <span id="countdown">10</span>s</button>
+                    <br>
+                    <a href="javascript:void(0)" id="firstVerifyBtn" class="scroll-btn" onclick="showSecondVerify(event)">𝐕𝐞𝐫𝐢𝐟𝐲 𝐏𝐥𝐞𝐚𝐬𝐞</a>
+                </div>
+            </div>
+
+            <!-- STEP 2 PORTION -->
+            <div id="step-2-section">
+                <iframe src="ad-native.html" width="100%" height="250" frameborder="0" scrolling="no"></iframe>
+                <div class="content-box">
+                    <h1>Security Verification & Link Generation</h1>
+                    <p>Hum ensure kar rahe hain ki saari security checks poori ho chuki hain.</p>
+                </div>
+                <div class="action-section" id="second-verify-section"></div>
+            </div>
+
+            <!-- STEP 3 PORTION -->
+            <div id="step-3-section"> 
+                <div class="content-box">
+                    <h1>Get Link</h1>
+                    <p>Aapka link bilkul taiyar hai. Niche diye gaye Continue button par click karein.</p>
+                </div>
+                <div class="action-section" id="third-continue-section">
+                    <a href="#" id="continueBtn" class="continue-btn" style="display:inline-block;" onclick="redirectToDestination(event)">𝐆𝐄𝐓 𝐋𝐈𝐍𝐊 / 𝐂𝐎𝐍𝐓𝐈🇳🇺🇪</a>
+                </div>
+            </div>
+        </main>
+
+        <aside class="sidebar-right">
+            <div class="ad-container"><iframe src="ad-native.html" width="100%" height="250" frameborder="0" scrolling="no"></iframe></div>
+            <div class="ad-container"><iframe src="ad-native.html" width="100%" height="250" frameborder="0" scrolling="no"></iframe></div>
+            <div class="ad-container"><iframe src="ad-native.html" width="100%" height="250" frameborder="0" scrolling="no"></iframe></div>
+        </aside>
+    </div>
+
+    <script>
+    let timeLeft = 10;
+    const countdownEl = document.getElementById("countdown");
+    const timerBtn = document.getElementById("timerButton");
+    const firstVerifyBtn = document.getElementById("firstVerifyBtn");
+    const topFloatingBanner = document.getElementById("topFloatingBanner");
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const encodedDest = urlParams.get('dest');
+
+    // Final redirection function jo Base64 aur encoded URL ko decode karegi
+    function redirectToDestination(event) {
+        event.preventDefault();
+        if (encodedDest) {
+            try {
+                // index.html ki btoa(encodeURIComponent(...)) ko decode karna
+                const decodedUrl = decodeURIComponent(atob(encodedDest));
+                window.location.href = decodedUrl;
+            } catch (e) {
+                // Agar kabhi plain URL ho toh direct redirect karein
+                window.location.href = encodedDest;
+            }
+        } else {
+            alert('Destination link not found!');
+        }
+    }
+
+    const timerInterval = setInterval(() => {
+        timeLeft--;
+        countdownEl.textContent = timeLeft;
+        if (timeLeft <= 0) {
+            clearInterval(timerInterval);
+            timerBtn.style.display = "none";
+            firstVerifyBtn.style.display = "inline-block";
+            if (topFloatingBanner) { topFloatingBanner.style.display = "none"; }
+        }
+    }, 1000);
+
+    function showSecondVerify(event) {
+        event.preventDefault();
+        firstVerifyBtn.innerText = "𝐒𝐜𝐫𝐨𝐥𝐥 𝐝𝐨𝐰𝐧";
+        firstVerifyBtn.style.backgroundColor = "#555";
+        firstVerifyBtn.style.cursor = "default";
+        firstVerifyBtn.onclick = null;
+
+        document.getElementById("step-2-section").style.display = "block";
+
+        const secondSection = document.getElementById("second-verify-section");
+        secondSection.innerHTML = `
+            <button id="secondTimerButton" class="timer-btn">𝐏𝐥𝐞𝐚𝐬𝐞 𝐖𝐚𝐢𝐭... <span id="secondCountdown">10</span>s</button>
+            <br>
+            <a href="javascript:void(0)" id="secondVerifyBtn" class="scroll-btn" onclick="showContinue(event)" style="display:none;">𝐕𝐄𝐑𝐈𝐅𝐘 𝐀𝐆𝐀𝐈𝐍</a>
+        `;
+
+        let secondTimeLeft = 10;
+        const secondCountdownEl = document.getElementById("secondCountdown");
+        const secondTimerBtn = document.getElementById("secondTimerButton");
+        const secondBtn = document.getElementById("secondVerifyBtn");
+
+        const secondTimerInterval = setInterval(() => {
+            secondTimeLeft--;
+            secondCountdownEl.textContent = secondTimeLeft;
+            if (secondTimeLeft <= 0) {
+                clearInterval(secondTimerInterval);
+                secondTimerBtn.style.display = "none";
+                secondBtn.style.display = "inline-block";
+            }
+        }, 1000);
+    }
+
+    function showContinue(event) {
+        event.preventDefault();
+        const secondBtn = document.getElementById("secondVerifyBtn");
+        secondBtn.innerText = "𝐒𝐜𝐫𝐨𝐥𝐥 𝐝𝐨𝐰𝐧";
+        secondBtn.style.backgroundColor = "#555";
+        secondBtn.style.cursor = "default";
+        secondBtn.onclick = null;
+
+        document.getElementById("step-3-section").style.display = "block";
+    }
+</script>
+
+</body>
+</html>
